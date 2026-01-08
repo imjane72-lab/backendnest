@@ -1,2 +1,2 @@
-export { UsersService } from './users.service';
+export { UserService } from './user.service';
 export { UserPrfoileService } from './user-profile.service';

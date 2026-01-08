@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { SignInDto, SignUpDto } from '../dto';
 
 @Injectable()
-export class UsersService {
+export class UserService {
   // 일반 회원가입
   signUp(payload: SignUpDto) {}
 
