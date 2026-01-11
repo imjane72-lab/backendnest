@@ -12,13 +12,13 @@ export class UserProfileEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column()
+  @Column({nullable: true, type: 'text'})
   nickname: string;
 
-  @Column()
+  @Column({nullable: true})
   biography: string;
 
-  @OneToOne(() => UserEntity, (user) => user.profile)
+  @OneToOne(() => UserEntity, (user) => user.profile, {onDelete: 'CASCADE'}) // 사용자가 삭제되면 프로필도 자동 삭제
   @JoinColumn()
   user: UserEntity;
 }
